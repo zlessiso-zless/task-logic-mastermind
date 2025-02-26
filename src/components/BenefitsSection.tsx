@@ -90,7 +90,7 @@ export const BenefitsSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {benefits.map((benefit) => (
             <div
               id={`benefit-${benefit.id}`}
@@ -117,6 +117,12 @@ export const BenefitsSection = () => {
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="mt-12 text-center">
+          <button className="px-6 py-3 bg-primary text-white rounded-lg shadow-md hover:bg-primary/90 transition-colors">
+            Explore All Benefits
+          </button>
         </div>
       </div>
     </section>

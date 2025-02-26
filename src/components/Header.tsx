@@ -31,9 +31,13 @@ export const Header = () => {
       <div className="animate-fadeIn max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <h1 className="text-2xl md:text-3xl font-semibold text-glam-dark">
-              Glam<span className="text-primary">Steals</span>
-            </h1>
+            <a href="/" className="flex items-center">
+              <img 
+                src="https://www.glamsteals.com.au/cdn/shop/files/logo-gold_140x.png?v=1614309235"
+                alt="GlamSteals Logo"
+                className="h-10 mr-2"
+              />
+            </a>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">

@@ -32,6 +32,40 @@ const mockOffers = [
   }
 ];
 
+// Additional offers to match the wireframe grid
+const additionalOffers = [
+  {
+    id: 4,
+    title: "Makeup Essentials Kit",
+    image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80",
+    discount: "25% OFF"
+  },
+  {
+    id: 5,
+    title: "Fragrance Collections",
+    image: "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=800&q=80",
+    discount: "10% OFF"
+  },
+  {
+    id: 6,
+    title: "Beauty Tools",
+    image: "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=800&q=80", 
+    discount: "Buy 2 Get 1 Free"
+  },
+  {
+    id: 7,
+    title: "Wellness Products",
+    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80",
+    discount: "30% OFF"
+  },
+  {
+    id: 8,
+    title: "Luxury Brands",
+    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80",
+    discount: "Special Pricing"
+  }
+];
+
 export const ExclusiveOffers = () => {
   const [activeOffer, setActiveOffer] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
@@ -66,7 +100,7 @@ export const ExclusiveOffers = () => {
           </p>
         </div>
         
-        <div className="flex flex-col lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-8 mb-16">
           <div className="lg:w-1/3 space-y-4">
             {mockOffers.map((offer, index) => (
               <div
@@ -160,6 +194,36 @@ export const ExclusiveOffers = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        
+        {/* Additional grid of offers to match wireframe */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-bold text-glam-dark text-center mb-8">More Exclusive Offers</h3>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {additionalOffers.map((offer) => (
+              <div 
+                key={offer.id}
+                className="glass-card rounded-lg overflow-hidden hover-scale"
+              >
+                <div className="aspect-square overflow-hidden">
+                  <img 
+                    src={offer.image} 
+                    alt={offer.title}
+                    className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                  />
+                </div>
+                <div className="p-3 text-center">
+                  <h4 className="text-sm font-semibold text-glam-dark truncate">{offer.title}</h4>
+                  <p className="text-xs font-medium text-primary mt-1">{offer.discount}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <button className="px-6 py-2.5 bg-white border border-primary text-primary rounded-lg hover:bg-glam-light-pink transition-colors">
+              View All Offers
+            </button>
           </div>
         </div>
       </div>
