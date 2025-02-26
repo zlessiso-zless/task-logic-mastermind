@@ -8,7 +8,7 @@ const mockOffers = [
     title: "Limited Edition Summer Collection",
     discount: "15% OFF",
     expiry: "3 days left",
-    image: "/lovable-uploads/bcdf3ff0-99cf-42a2-9943-fe424be1f4fe.png",
+    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80",
     code: "SUMMER15",
     personalized: true
   },
@@ -17,7 +17,7 @@ const mockOffers = [
     title: "Premium Skincare Bundle",
     discount: "20% OFF",
     expiry: "1 week left",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80",
     code: "SKINGLOW20",
     personalized: false
   },
@@ -26,7 +26,7 @@ const mockOffers = [
     title: "Gold Member Exclusive: Hair Care",
     discount: "Buy One Get One Free",
     expiry: "2 weeks left",
-    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=800&q=80",
     code: "GOLDHAIR2X",
     personalized: true
   }
@@ -74,13 +74,13 @@ export const ExclusiveOffers = () => {
                 className={`p-4 rounded-xl hover-scale cursor-pointer transition-all duration-300 ${
                   activeOffer === index 
                     ? 'bg-primary text-white shadow-lg' 
-                    : 'bg-white border border-glam-light-pink hover:border-primary'
+                    : 'glass-card hover:border-primary'
                 }`}
                 onClick={() => setActiveOffer(index)}
               >
                 <div className="flex items-center">
                   <div 
-                    className={`w-12 h-12 rounded-lg overflow-hidden mr-4 ${
+                    className={`w-14 h-14 rounded-lg overflow-hidden mr-4 ${
                       activeOffer === index ? 'border-2 border-white' : 'border border-glam-light-pink'
                     }`}
                   >
@@ -115,7 +115,7 @@ export const ExclusiveOffers = () => {
           </div>
           
           <div className="lg:w-2/3">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden glass-card animate-scaleIn h-full">
+            <div className="glass-card rounded-2xl overflow-hidden animate-scaleIn h-full">
               <div className="aspect-w-16 aspect-h-9 w-full h-48 md:h-64 lg:h-80 overflow-hidden">
                 <img
                   src={mockOffers[activeOffer].image}
@@ -154,7 +154,7 @@ export const ExclusiveOffers = () => {
                 </div>
                 
                 <div className="mt-8">
-                  <button className="w-full py-3 rounded-lg bg-glam-dark text-white font-medium hover:bg-glam-dark/90 transition-colors">
+                  <button className="w-full py-3 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 transition-colors">
                     Shop Now
                   </button>
                 </div>

@@ -6,37 +6,43 @@ const benefits = [
     id: 1,
     title: "Exclusive Discounts",
     description: "Get up to 25% off on select premium brands and collections",
-    icon: "💎"
+    icon: "💎",
+    image: "https://images.unsplash.com/photo-1607083206968-13611e3d76db?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 2,
     title: "Early Access",
     description: "Shop new arrivals 24 hours before they're available to everyone else",
-    icon: "🔑"
+    icon: "🔑",
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 3,
     title: "Free Shipping",
     description: "Enjoy free standard shipping on all your orders, no minimum purchase required",
-    icon: "🚚"
+    icon: "🚚",
+    image: "https://images.unsplash.com/photo-1565307528294-f70f3c7094e0?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 4,
     title: "Birthday Treat",
     description: "Receive a special gift or discount during your birthday month",
-    icon: "🎁"
+    icon: "🎁",
+    image: "https://images.unsplash.com/photo-1513201099705-a9746e1e201f?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 5,
     title: "Points Multipliers",
     description: "Earn double or triple points during special events and promotions",
-    icon: "✨"
+    icon: "✨",
+    image: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: 6,
     title: "Member-Only Events",
     description: "Get invited to exclusive shopping events and beauty workshops",
-    icon: "📅"
+    icon: "📅",
+    image: "https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80"
   }
 ];
 
@@ -70,7 +76,7 @@ export const BenefitsSection = () => {
   }, []);
   
   return (
-    <section id="benefits" className="py-16 px-6 sm:px-10 md:px-16 lg:px-24 bg-gradient-to-b from-white to-glam-light-pink">
+    <section id="benefits" className="py-16 px-6 sm:px-10 md:px-16 lg:px-24">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <span className="px-3 py-1 text-xs font-medium bg-primary/10 text-primary rounded-full">
@@ -89,17 +95,26 @@ export const BenefitsSection = () => {
             <div
               id={`benefit-${benefit.id}`}
               key={benefit.id}
-              className={`glass-card rounded-xl p-6 hover-scale transition-opacity duration-700 ease-in-out ${
+              className={`glass-card rounded-xl overflow-hidden hover-scale transition-opacity duration-700 ease-in-out ${
                 visibleBenefits.includes(benefit.id) ? 'opacity-100' : 'opacity-0'
               }`}
             >
-              <div className="w-12 h-12 rounded-full bg-glam-light-pink flex items-center justify-center mb-4">
-                <span className="text-2xl" role="img" aria-label={benefit.title}>
-                  {benefit.icon}
-                </span>
+              <div className="w-full h-40 overflow-hidden">
+                <img 
+                  src={benefit.image} 
+                  alt={benefit.title}
+                  className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-glam-dark mb-2">{benefit.title}</h3>
-              <p className="text-glam-dark/70">{benefit.description}</p>
+              <div className="p-6">
+                <div className="flex items-center mb-3">
+                  <span className="text-2xl mr-3" role="img" aria-label={benefit.title}>
+                    {benefit.icon}
+                  </span>
+                  <h3 className="text-xl font-semibold text-glam-dark">{benefit.title}</h3>
+                </div>
+                <p className="text-glam-dark/70">{benefit.description}</p>
+              </div>
             </div>
           ))}
         </div>

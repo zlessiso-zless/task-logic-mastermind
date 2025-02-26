@@ -50,7 +50,7 @@ export const Header = () => {
           </div>
         </div>
         
-        <div className="mt-16 mb-8 text-center">
+        <div className="mt-16 mb-12 text-center">
           <span className="inline-block px-3 py-1 text-xs font-medium bg-glam-light-pink text-primary rounded-full mb-4 animate-scaleIn">
             {mockUserData.tier} Member Since {mockUserData.memberSince}
           </span>
@@ -60,6 +60,15 @@ export const Header = () => {
           <p className="mt-4 text-base md:text-lg text-glam-dark/80 max-w-xl mx-auto animate-fadeIn animate-delay-200">
             Welcome back to your personalized Glam Steals rewards dashboard. Discover your rewards, track your progress, and enjoy exclusive offers.
           </p>
+          
+          <div className="mt-8 flex justify-center space-x-4 animate-fadeIn animate-delay-300">
+            <button className="px-5 py-2.5 bg-primary text-white rounded-lg shadow-md hover:bg-primary/90 transition-colors">
+              Browse Rewards
+            </button>
+            <button className="px-5 py-2.5 bg-white border border-primary/20 text-primary rounded-lg shadow-sm hover:bg-glam-light-pink transition-colors">
+              View Account
+            </button>
+          </div>
         </div>
       </div>
     </header>
