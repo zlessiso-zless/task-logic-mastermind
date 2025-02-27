@@ -43,6 +43,11 @@
     --sidebar-accent-foreground: 0 0% 10%;
     --sidebar-border: 0 0% 90%;
     --sidebar-ring: 0 0% 0%;
+    
+    /* Gold tint colors */
+    --gold-light: 45 70% 80%;
+    --gold-medium: 45 80% 60%;
+    --gold-dark: 45 80% 40%;
   }
 
   .dark {
@@ -130,5 +135,14 @@
   
   .text-shadow {
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Gold tint effect for the logo */
+  .logo-gold-tint {
+    filter: drop-shadow(0 0 1px rgba(212, 175, 55, 0.5));
+  }
+  
+  .logo-gold-tint-footer {
+    filter: drop-shadow(0 0 1px rgba(212, 175, 55, 0.5)) invert(1);
   }
 }

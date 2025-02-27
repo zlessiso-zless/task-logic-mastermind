@@ -35,7 +35,7 @@ export const Header = () => {
               <img 
                 src="/glamsteals-logo.png"
                 alt="GlamSteals Logo"
-                className="h-12"
+                className="h-12 logo-gold-tint"
               />
             </a>
           </div>

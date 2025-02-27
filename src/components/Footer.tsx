@@ -23,7 +23,7 @@ export const Footer = () => {
               <img 
                 src="/glamsteals-logo.png"
                 alt="GlamSteals Logo"
-                className="h-8 invert" // Invert to make it white on black background
+                className="h-8 logo-gold-tint-footer"
               />
             </a>
             <p className="mt-4 text-white/70 text-sm">

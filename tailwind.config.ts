@@ -69,6 +69,11 @@ export default {
 				'glam-gray': '#8E9196', // Gray
 				'glam-light-gray': '#f5f5f5', // Light gray
 				'glam-dark-gray': '#333333', // Dark gray
+				'gold': {
+					light: 'hsl(var(--gold-light))',
+					DEFAULT: '#D4AF37', // Classic gold
+					dark: 'hsl(var(--gold-dark))'
+				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -145,6 +150,7 @@ export default {
 			},
 			boxShadow: {
 				'glam': '0 4px 20px rgba(0, 0, 0, 0.15)',
+				'gold': '0 0 10px rgba(212, 175, 55, 0.3)'
 			},
 		}
 	},
